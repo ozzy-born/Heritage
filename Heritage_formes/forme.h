@@ -10,13 +10,14 @@
 
 #include <string>
 using namespace std;
+#include <iostream>
 
 class CForme
 {
 
 public:
 	CForme();
-	virtual ~CForme();
+	~CForme();
 
 	CForme(string _nom);
 	void afficher();

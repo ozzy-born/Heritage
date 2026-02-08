@@ -19,16 +19,19 @@ CCarre::~CCarre(){
 }
 
 
-CCarre::CCarre(int _cote){
+CCarre::CCarre(int _cote):
+	cote(_cote)
+{
 
 }
 
 
 void CCarre::afficher(){
-
+	std::cout << "Carre de cote : " << cote << std::endl;
+	std::cout << "et de Surface : " << surface() << std::endl;
 }
 
 double CCarre::surface(){
 
-	return 0;
+	return cote * cote;
 }

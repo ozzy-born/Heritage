@@ -18,7 +18,11 @@ CRectangle::CRectangle(){
  * constructeur prends le paramètre "nom" de la classe de base et les deux
  * paramètres "longueur" et "largeur" propres à la classe CRectangle
  */
-CRectangle::CRectangle(string nom, int _largeur, int _longueur) {
+CRectangle::CRectangle(string nom, int _largeur, int _longueur):
+	CForme(nom),
+	largeur(_largeur),
+	longueur(_longueur)
+{
 
 }
 
@@ -32,6 +36,8 @@ CRectangle::~CRectangle(){
  * affiche le nom, la longueur, la largeur et la surface du rectangle
  */
 void CRectangle::afficher(){
+	std::cout << "Rectangle de " << largeur << " x " << longueur << std::endl;
+	std::cout << "et de Surface : " << surface() << std::endl;
 
 }
 
@@ -42,5 +48,5 @@ void CRectangle::afficher(){
  */
 double CRectangle::surface(){
 
-	return 0;
+	return longueur * largeur;
 }

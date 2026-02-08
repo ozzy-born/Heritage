@@ -30,7 +30,7 @@ CForme::CForme(string _nom){
  * Affiche le nom de la forme
  */
 void CForme::afficher(){
-
+	std::cout << "Forme : " << nom << std::endl;
 }
 
 

@@ -9,6 +9,7 @@
 #define EA_F4AA348A_CB84_4bda_BB01_CEB429BA389A__INCLUDED_
 
 #include "forme.h"
+#include <math.h>
 
 class COctogoneRegulier : public CForme
 {

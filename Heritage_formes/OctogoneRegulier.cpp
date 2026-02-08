@@ -8,6 +8,7 @@
 #include "OctogoneRegulier.h"
 
 
+
 COctogoneRegulier::COctogoneRegulier(){
 
 }
@@ -23,17 +24,22 @@ COctogoneRegulier::~COctogoneRegulier(){
  */
 void COctogoneRegulier::afficher(){
 
+	std::cout << "Octogone regulier de cote : " << cote << std::endl;
+	std::cout << "et de Surface : " << surface() << std::endl;
 }
 
 
 /**
  * constructeur qui initialise le nom de la forme
  */
-COctogoneRegulier::COctogoneRegulier(string _nom, int _cote){
+COctogoneRegulier::COctogoneRegulier(string _nom, int _cote):
+	CForme(_nom),
+	cote(_cote)
+{
 
 }
 
 double COctogoneRegulier::surface(){
 
-	return 0;
+	return 2 * ( 1 + sqrt(2) ) * cote * cote;
 }
