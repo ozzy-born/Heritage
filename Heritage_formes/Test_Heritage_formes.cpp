@@ -15,8 +15,12 @@ void partie2();
 
 int main()
 {
-	
+
     std::cout << "Test des classes formes\n";
+
+	CForme* mForme = new CRectangle("Rectangle_1", 10, 5);
+	std::cout << "Surface via pointeur base : " << mForme->surface() << std::endl;
+
 
 	CTriangle triangle("Triangle_1", 10, 5);	// Creation d un triangle de base 5 et de hauteur 10
 	CRectangle rectangle("Rectangle_1", 10, 5);	// Creation d un rectangle de longueur 10 et de largeur 5
