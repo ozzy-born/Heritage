@@ -31,13 +31,17 @@ void partie2_3() {
 	std::cout << "Surface du rectangle via pointeur sur forme : " << mForme->surface() << std::endl;	// Affichage de la surface du rectangle via le pointeur de la classe de base
 }
 
+void partie4() {
+	CForme forme("forme_abstraite");	//Compilation error : on ne peut pas instancier une classe abstraite
+}
+
 int main()
 {
 
     std::cout << "Test des classes formes\n";
 	
 	//partie1();	// Test de la partie 1
-	partie2_3();		// Test de la partie 2 et 3
+	//partie2_3();		// Test de la partie 2 et 3
 	
 	return 0;
 

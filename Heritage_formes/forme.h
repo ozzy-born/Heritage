@@ -24,9 +24,9 @@ public:
 	CForme();
 	~CForme();
 
-	CForme(string _nom);		// constructeur surcharge qui initialise la forme avec son nom
-	virtual void afficher();	// Methode virtuelle pour afficher les caracteristiques de la forme
-	virtual double surface();	// Methode virtuelle pour calculer la surface de la forme
+	CForme(string _nom);			// constructeur surcharge qui initialise la forme avec son nom
+	virtual void afficher();		// Methode virtuelle pour afficher les caracteristiques de la forme
+	virtual double surface() = 0;	// Methode virtuelle pour calculer la surface de la forme
 
 private:
 	/**
