@@ -8,6 +8,7 @@
 #include "carre.h"
 #include "triangle.h"
 #include "OctogoneRegulier.h"
+#include "cercle.h"
 
 
 void partie1()
@@ -59,6 +60,24 @@ void partie6() {
 	caree.surface();		// Appel de la methode surface() de la classe CCarre
 }
 
+void partie7() {
+	std::vector<CForme*> formes;								//Creation d'un vecteur de type CForme*
+	formes.push_back(new CRectangle("Rectangle_1", 10, 5));		// Creation d un rectangle de longueur 10 et de largeur 5 dans le vecteur
+	formes.push_back(new CCarre(5));							// Creation d un carre de cote 5 dans le vecteur
+	formes.push_back(new CTriangle("Triangle_1", 10, 5));		// Creation d un triangle de base 5 et de hauteur 10 dans le vecteur
+	formes.push_back(new COctogoneRegulier("Octogone_1", 5));	// Creation d un octogone regulier de cote 5 dans le vecteur
+	formes.push_back(new CCercle(5));							// Creation d'un cercle de rayon 5
+
+	for (int i = 0; i < formes.size(); i++) {
+		formes[i]->afficher();	// Affichage de la forme à l'emplacement i du vecteur
+
+	}
+
+	for (int i = 0; i < formes.size(); i++) {
+		delete formes[i];		//Liberation de la memoire
+	}
+}
+
 int main()
 {
 
@@ -68,7 +87,8 @@ int main()
 	//partie2_3();	// Test de la partie 2 et 3
 	//partie4();	// Test de la partie 4
 	//partie5();	// Test de la partie 5
-	partie6();
+	//partie6();	// Test de la partie 6
+	partie7();	// Test de la partie 7
 
 	return 0;
 
