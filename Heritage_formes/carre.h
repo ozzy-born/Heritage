@@ -24,7 +24,7 @@ public:
 
 	CCarre(int _cote);			//constructeur surcharge qui initialise carre avec son cote
 	virtual void afficher();	// Methode virtuelle pour afficher les caracteristiques de la forme
-	virtual double surface();	// Methode virtuelle pour calculer la surface de la forme
+	//virtual double surface();	// Methode virtuelle pour calculer la surface de la forme
 
 private:
 	/**

@@ -31,7 +31,7 @@ void CCarre::afficher(){
 	std::cout << "et de Surface : " << surface() << std::endl;
 }
 
-double CCarre::surface(){
+/*double CCarre::surface() {
 
 	return cote * cote;
-}
+}*/
