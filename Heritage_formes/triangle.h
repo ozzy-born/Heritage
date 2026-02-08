@@ -10,6 +10,10 @@
 
 #include "forme.h"
 
+/**
+ * classe qui modelise un triangle qui est une forme donc un triangle sera
+ * defini par son nom, sa hauteur et sa base
+ */
 class CTriangle : public CForme
 {
 
@@ -17,12 +21,18 @@ public:
 	CTriangle();
 	virtual ~CTriangle();
 
-	CTriangle(string nom, int _hauteur, int _base);
-	void afficher();
-	double surface();
+	CTriangle(string nom, int _hauteur, int _base);	// Constructeur surcharge qui initialise le triangle avec son nom, sa hauteur et sa base
+	virtual void afficher();						// Methode virtuelle pour afficher les caracteristiques de la forme
+	virtual double surface();						// Methode virtuelle pour calculer la surface de la forme
 
 private:
+	/**
+	 * base du triangle en valeur entiere
+	 */
 	int base;
+	/**
+	 * hauteur du triangle en valeur entiere
+	 */
 	int hauteur;
 
 };

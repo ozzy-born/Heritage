@@ -9,19 +9,8 @@
 #include "OctogoneRegulier.h"
 
 // fonctions de test à coder
-void partie1();
-void partie2();
-/// etc...
-
-int main()
+void partie1()
 {
-
-    std::cout << "Test des classes formes\n";
-
-	CForme* mForme = new CRectangle("Rectangle_1", 10, 5);
-	std::cout << "Surface via pointeur base : " << mForme->surface() << std::endl;
-
-
 	CTriangle triangle("Triangle_1", 10, 5);	// Creation d un triangle de base 5 et de hauteur 10
 	CRectangle rectangle("Rectangle_1", 10, 5);	// Creation d un rectangle de longueur 10 et de largeur 5
 	CCarre carre(5);							// Creation d un carre de cote 5
@@ -35,7 +24,25 @@ int main()
 	carre.surface();		// Affichage de la surface du carre
 	octogone.afficher();	// Affichage de l octogone regulier
 	octogone.surface();		// Affichage de la surface de l octogone regulier
+}
+
+void partie2_3() {
+	CForme* mForme = new CRectangle("Rectangle_1", 10, 5);												// Creation d un rectangle de longueur 10 et de largeur 5 via un pointeur de la classe de base
+	std::cout << "Surface du rectangle via pointeur sur forme : " << mForme->surface() << std::endl;	// Affichage de la surface du rectangle via le pointeur de la classe de base
+}
+
+int main()
+{
+
+    std::cout << "Test des classes formes\n";
+	
+	//partie1();	// Test de la partie 1
+	partie2_3();		// Test de la partie 2 et 3
+	
 	return 0;
+
+
+
 
 }
 

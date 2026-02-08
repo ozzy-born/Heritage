@@ -11,28 +11,28 @@
 #include "forme.h"
 
 /**
- * classe qui modélise un rectangle qui est une forme donc un rectangle sera
- * défini par son nom, sa longueur et sa largeur
+ * classe qui modelise un rectangle qui est une forme donc un rectangle sera
+ * defini par son nom, sa longueur et sa largeur
  */
 class CRectangle : public CForme
 {
 
 public:
 	CRectangle();
-	CRectangle(string nom, int _largeur, int _longueur);
+	CRectangle(string nom, int _largeur, int _longueur);	//Constructeur surcharge qui initialise le rectangle avec son nom, sa longueur et sa largeur
 	virtual ~CRectangle();
 
-	void afficher();
+	virtual void afficher();	// Methode virtuelle pour afficher les caracteristiques de la forme
 	
-	double surface();
+	virtual double surface();	// Methode virtuelle pour calculer la surface de la forme
 
 private:
 	/**
-	 * largeur du rectangle en valeur entière pour simplifier
+	 * largeur du rectangle en valeur entiere pour simplifier
 	 */
 	int largeur;
 	/**
-	 * longueur du rectangle en valeur entière pour simplifier
+	 * longueur du rectangle en valeur entiere pour simplifier
 	 */
 	int longueur;
 

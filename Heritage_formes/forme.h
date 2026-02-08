@@ -12,6 +12,11 @@
 using namespace std;
 #include <iostream>
 
+/**
+ * classe qui modelise une forme et donc sera
+ * defini par son nom
+ */
+
 class CForme
 {
 
@@ -19,13 +24,13 @@ public:
 	CForme();
 	~CForme();
 
-	CForme(string _nom);
-	void afficher();
-	double surface();
+	CForme(string _nom);		// constructeur surcharge qui initialise la forme avec son nom
+	virtual void afficher();	// Methode virtuelle pour afficher les caracteristiques de la forme
+	virtual double surface();	// Methode virtuelle pour calculer la surface de la forme
 
 private:
 	/**
-	 * nom de la forme pour l'identifier. Ce nom sera affiché dans la méthode affiche()
+	 * nom de la forme pour l identifier. Ce nom sera affiche dans la methode affiche()
 	 */
 	string nom;
 

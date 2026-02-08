@@ -10,6 +10,11 @@
 
 #include "rectangle.h"
 
+/**
+ * classe qui modelise un caree qui est un rectangle donc un caree sera
+ * defini par son cote
+ */
+
 class CCarre : public CRectangle
 {
 
@@ -17,11 +22,14 @@ public:
 	CCarre();
 	virtual ~CCarre();
 
-	CCarre(int _cote);
-	void afficher();
-	double surface();
+	CCarre(int _cote);			//constructeur surcharge qui initialise carre avec son cote
+	virtual void afficher();	// Methode virtuelle pour afficher les caracteristiques de la forme
+	virtual double surface();	// Methode virtuelle pour calculer la surface de la forme
 
 private:
+	/**
+	 * cote du caree en valeur entiere
+	 */
 	int cote;
 
 };
